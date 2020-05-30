@@ -1,93 +1,93 @@
 var quizQuestions = [
   {
-      question: "ලංකාවේ උසම දියඇල්ල?",
+      question: "ලංකාවේ ජාතික සත්වයා?",
       answers: [
           {
               key: "1",
-              content: "Diyaluma"
+              content: "වලි කුකුළා "
           },
           {
               key: "2",
-              content: "Babara Kanda"
+              content: "සිංහයා"
           },
           {
               key: "3",
-              content: "Dunhinda"
+              content: "දඬු ලේනා"
+          }
+      ],
+      correctAnswerKey: "3"
+  },
+  {
+      question: "ගුවන් යානයේ කළු පෙට්ටියේ වර්ණය?",
+      answers: [
+          {
+              key: "1",
+              content: "කළු "
+          },
+          {
+              key: "2",
+              content: "තැඹිලි"
+          },
+          {
+              key: "3",
+              content: "රතු"
           }
       ],
       correctAnswerKey: "2"
   },
   {
-      question: "Which console would you prefer to play with friends?",
+      question: "පෘතුවිය සුර්යා වටා පරිභ්‍රමණය වන වේගය?",
       answers: [
           {
               key: "1",
-              content: "X-Box"
+              content: "30 KMPS"
           },
           {
               key: "2",
-              content: "Nintendo 64"
+              content: "50 KMPS"
           },
           {
               key: "3",
-              content: "Playstation 1"
+              content: "10 KMPS"
           }
       ],
-      correctAnswerKey: "2"
+      correctAnswerKey: "1"
   },
   {
-      question: "Which of these racing franchises would you prefer to play a game from?",
+      question: "ලෝකයේ ප්‍රථම වරට ටෙස්ට් ත්‍රිත්ව ශතකයක් වාර්තා කල ක්‍රීඩකයා?",
       answers: [
           {
               key: "1",
-              content: "Forza"
+              content: "දොන් බ්‍රැඩ්මන්"
           },
           {
               key: "2",
-              content: "Mario Kart"
+              content: "බ්‍රයන් ලාරා"
           },
           {
               key: "3",
-              content: "Gran Turismo"
+              content: "ඇන්ඩි සැන්ඩම්"
           }
       ],
-      correctAnswerKey: "2"
+      correctAnswerKey: "3"
   },
   {
-      question: "Which of these games do you think is best?",
+      question: "ලංකාවේ ප්‍රථම කතානාද චිත්‍රපටිය?",
       answers: [
           {
               key: "1",
-              content: "BioShock"
+              content: "කඩවුනු පොරොන්දුව"
           },
           {
               key: "2",
-              content: "The Legend of Zelda: Ocarina of Time"
+              content: "රන්මුතු දූව"
           },
           {
               key: "3",
-              content: "Final Fantasy VII"
+              content: "රේකාව"
           }
       ],
-      correctAnswerKey: "2"
-  },
-  {
-      question: "What console would you prefer to own?",
-      answers: [
-          {
-              key: "1",
-              content: "X-Box One"
-          },
-          {
-              key: "2",
-              content: "Wii U"
-          },
-          {
-              key: "3",
-              content: "Playstation 4"
-          }
-      ],
-      correctAnswerKey: "2"
+      correctAnswerKey: "1"
   }
 ];
 
