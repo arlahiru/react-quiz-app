@@ -18,7 +18,8 @@ class App extends Component {
       onSelectAnswer: '',
       correctAnswerKey: '',
       answersCount: {},
-      result: 0
+      result: 0,
+      isQuizEnd:"false"
     };
 
     this.onAnswerSelected = this.onAnswerSelected.bind(this);
@@ -67,7 +68,7 @@ class App extends Component {
       if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
       } else {
-        setTimeout(() => this.setResults(this.getResults()), 300);
+        this.setState({ isQuizEnd: "true" });
       }
     }else{
       alert("Please submit your answer before go to next question")
@@ -94,7 +95,8 @@ class App extends Component {
       selectedAnswer: answer
     }));
     if(answer == this.state.correctAnswerKey){
-      this.state.result += 20;
+      const updatedResult =  this.state.result + 20;
+      this.setState({ result: updatedResult });
     }
   }
 
@@ -111,23 +113,6 @@ class App extends Component {
       selectedAnswer: '',
       onSelectAnswer : ''
     });
-  }
-
-  getResults() {
-    const answersCount = this.state.answersCount;
-    const answersCountKeys = Object.keys(answersCount);
-    const answersCountValues = answersCountKeys.map(key => answersCount[key]);
-    const maxAnswerCount = Math.max.apply(null, answersCountValues);
-
-    return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
-  }
-
-  setResults(result) {
-    if (result.length === 1) {
-      this.setState({ result: result[0] });
-    } else {
-      this.setState({ result: 'Undetermined' });
-    }
   }
 
   renderQuiz() {
@@ -158,7 +143,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>සිංහල Quiz App</h2>
         </div>
-        {this.state.questionId == 5 ? this.renderResult() : this.renderQuiz()}
+        {this.state.isQuizEnd == "true" ? this.renderResult() : this.renderQuiz()}
       </div>
     );
   }
